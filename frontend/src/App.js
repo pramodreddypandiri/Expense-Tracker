@@ -1,11 +1,13 @@
 
 import './App.css';
-
+import Expense from './Home/components/expense';
+import Header from './Home/components/header';
 function App() {
   return (
-    <div className="App">
-      Hello World
-    </div>
+    <>
+        <Header/>
+        <Expense/>
+    </>
   );
 }
 
