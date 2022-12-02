@@ -30,7 +30,7 @@ function Expense() {
                     <option value="investment" >Investment </option>
                     <option value="grocery">Grocery</option>
                 </select>
-                <button type='submit' className='bg-green-400 px-3 py-2 text-white rounded-lg font-semibold'> Log Expense </button>
+                <button type='submit' className='bg-blue-500 px-3 py-2 text-white rounded-lg font-semibold'> Log Expense </button>
             </div>
             </div>
             
