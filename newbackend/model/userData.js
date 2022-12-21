@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const userSchema = new mongoose.Schema({
     category: {
         type: String,
-        require: [true, "Category is required"]
+        require: [true, "Category is required field"]
         
     },
     amount: {
