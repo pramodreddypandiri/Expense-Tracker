@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { categories } from '../assets/categories'
 function Expense() {
     const [amount, setAmount] = useState('')
     const [desc, setDesc] = useState('')
@@ -26,9 +26,11 @@ function Expense() {
                 <input className='p-2' value={desc} type="text"  name= "description" placeholder='Enter Description' onChange={(event) =>{setDesc(event.target.value)}}></input>
                 <select className='p-2'>
                     <option> Select a Category </option>
-                    <option value="medicine">Medicine </option>
-                    <option value="investment" >Investment </option>
-                    <option value="grocery">Grocery</option>
+                    {categories.map((cat,id) => {
+                        return (
+                            <option key={id} value={cat.name}>{cat.name}</option>
+                        )
+                    })}
                 </select>
                 <button type='submit' className='bg-blue-500 px-3 py-2 text-white rounded-lg font-semibold'> Log Expense </button>
             </div>

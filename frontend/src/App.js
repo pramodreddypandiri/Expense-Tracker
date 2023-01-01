@@ -1,18 +1,27 @@
-
+import React from 'react';
 import './App.css';
-import Expense from './Home/components/expense';
-import Header from './Home/components/header';
-import Overview from './Home/components/overview';
+import Footer from './components/footer';
+import Header from './components/header';
+import Manage from './components/manage';
+import Insights from './components/insights';
+import { BrowserRouter as Router ,Route, Routes } from 'react-router-dom';
+import Home from './components/home';
 function App() {
   return (
-    <>
-        <Header/>
-        <div className='flex flex-row justify-between max-w-6xl mx-auto h-auto'>
-            <Expense/>
-            <Overview/>
-        </div>
+    <div>  
+        <Router>
+          <Header/>
+          <Routes>
+              <Route path='' exact element={<Home/>}/>
+              <Route path='manage' exact element={<Manage/>}/>
+              <Route path='insights' exact element={<Insights/>}/>
+              
+          </Routes>
+          <Footer/>
+        </Router>
         
-    </>
+        
+    </div>
   );
 }
 
